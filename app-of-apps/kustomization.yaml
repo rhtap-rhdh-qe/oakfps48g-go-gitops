@@ -1,0 +1,13 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+commonLabels:         
+  tssc/gitops: oakfps48g-go 
+  janus-idp.io/tekton: oakfps48g-go
+  backstage.io/kubernetes-id: oakfps48g-go
+  backstage.io/kubernetes-namespace: tssc-app 
+  app.kubernetes.io/part-of: oakfps48g-go
+resources:
+  - ci-tekton.yaml
+  - application-dev.yaml
+  - application-stage.yaml
+  - application-prod.yaml
